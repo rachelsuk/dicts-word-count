@@ -14,8 +14,7 @@ for line in file:
         word = word.lower()
         tokens.append(word)
 word_count = collections.Counter(tokens)
-sorted_word_count = sorted(word_count)
 
-for word in sorted_word_count:
+for word,count in sorted(word_count.items(), key=lambda item: item[1]):
     print(f'{word} {word_count[word]}')
 
