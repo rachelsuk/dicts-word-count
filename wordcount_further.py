@@ -15,6 +15,6 @@ for line in file:
         tokens.append(word)
 word_count = collections.Counter(tokens)
 
-for word,count in sorted(word_count.items(), key=lambda item: item[1]):
+for word,count in reversed(word_count.items(), key=lambda item: item[1]):
     print(f'{word} {word_count[word]}')
 
